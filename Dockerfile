@@ -16,6 +16,8 @@ RUN set -ex \
         && npm install \
         && cp chatgptbot.config.example.json chatgptbot.config.json
         && apk del .build-deps \
-        && rm -rf ~/.cache 
+        && rm -rf ~/.cache \
+        && wget https://raw.githubusercontent.com/phoenixxie0/chatgpt-tg-bot-docker/main/start.sh -O /start.sh \
+        && chmod +x /start.sh 
         
-CMD ["node"]
+CMD ["/start.sh"]
