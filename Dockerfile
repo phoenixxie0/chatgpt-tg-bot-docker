@@ -14,7 +14,7 @@ RUN set -ex \
         && git clone https://github.com/shishkevichd/telegram-chatgpt-bot \
         && cd telegram-chatgpt-bot \
         && npm install \
-        && cp chatgptbot.config.example.json chatgptbot.config.json
+        && cp chatgptbot.config.example.json chatgptbot.config.json \
         && apk del .build-deps \
         && rm -rf ~/.cache \
         && wget https://raw.githubusercontent.com/phoenixxie0/chatgpt-tg-bot-docker/main/start.sh -O /start.sh \
